@@ -6,6 +6,13 @@
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel": "^1.12.4",
+    "rimraf": "^3.0.2",
     "sass": "^1.24.0"
+  },
+  "scripts": {
+    "start": "parcel index.html --out-dir docs",
+    "prebuild": "rimraf docs",
+    "build": "parcel build index.html --out-dir docs --public-url ./"
   }
 }
