@@ -11,8 +11,8 @@
     "sass": "^1.24.0"
   },
   "scripts": {
-    "start": "parcel index.html --out-dir docs",
-    "prebuild": "rimraf docs",
-    "build": "parcel build index.html --out-dir docs --public-url ./"
+    "start": "parcel index.html --out-dir dist",
+    "prebuild": "rimraf dist",
+    "build": "parcel build index.html --out-dir dist --public-url ./"
   }
 }
