@@ -17,9 +17,9 @@
 
 	@include breakpoints((
 		default:   (1681px,   null     ),
-		xlarge:    (1281px,   1920px   ),
-		large:     (1153px,   1280px   ),
-		medium:    (737px,    1152px   ),
+		xlarge:    (1920px,   3840px   ),
+		large:     (1576px,   1920px   ),
+		medium:    (737px,    1575px   ),
 		small:     (481px,    736px    ),
 		xsmall:    (361px,    480px    ),
 		xxsmall:   (null,     360px    )
