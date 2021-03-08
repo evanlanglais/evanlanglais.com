@@ -157,14 +157,12 @@
             <h2>Past Projects / Ventures</h2>
         </header>
         <div class="content">
-            <!--<p>These projects are the ones that I actively maintain and develop in my spare time. over the years have been varied in completeness. Below are some information and details about the projects that are the most complete.</p>-->
-
             <section id="generators">
                 <header>
-                    <h3>Emergency Generator "On-the-Cloud"</h3>
+                    <h3>Emergency Generators "On-the-Cloud"</h3>
                     <h4>2018-2019</h4>
                     <p>
-                        The final senior design project as part of UConn's engineering curriculum. The problem / request came from a Connecticut company which installs and maintains Kohler generators.
+                        The senior design project as part of UConn's engineering curriculum. The problem / request came from a Connecticut company which installs and maintains Kohler generators.
                     </p>
                 </header>
                 <div class="content">
@@ -172,19 +170,19 @@
                         Led a team of 6 academic peers to fulfill client requirement of allowing technicians to view data of, and send commands to, an existing infrastructure of over 7000 generators throughout the northeast, via a web app.
                     </p>
                     <p>
-                        I became the projects lead architect, and after reading IOT and big-data white papers provided by our academic advisor,
+                        I became the project's lead architect, and after reading IOT and big-data white papers provided by our academic advisor,
                         I planned a five stage pipeline which would theoretically allow a full rollout of retrofitting the 7000+ generators and fully supporting the amount of data processing that would be associated with it.
-                        To implement the project, the team worked together to plan all necessary tasks, their dependencies, and estimated amount of work. Together, we were able to create a fully working prototype several weeks before UConn's Demo Day 2019.
+                        To implement the project, the team worked together to plan all necessary tasks, those tasks' dependencies, and estimated amount of work. Together, we were able to create a fully working prototype several weeks before UConn's Demo Day 2019.
                     </p>
                     <p>
                         The five stage data pipeline included
                     </p>
                     <ol>
-                        <li>Attached a Raspberry Pi to the generator's computer, and utilize a Go app to communicate via the MODBUS protocol to read sensor data, package into efficient structure via Arvo, and sent to gateway server</li>
-                        <li>A Go Gateway server/router maintained generator connectivity status by authenticating new generator connections, pinging to verify update, and routed incoming data packages to processing pipeline</li>
-                        <li>The processing pipeline starts with a Kafka cluster to ensure scalability, and data is consumed via a Scala app that is spun up in a Spark cluster. The Scala app will unpack the data and transform the input into time-series data, POSTing that to an OpenTSDB database</li>
-                        <li>An express.js REST API is utilized to return generator inventory from MariaDB and status from Gateway server, sensor time-series data, and send commands back to the generator</li>
-                        <li>An Angular web-app provides a dashboard for a technician to log in, view the health of all generators they have permission to view, and visualize sensor data over time using chart.js</li>
+                        <li>Attaching a Raspberry Pi to the generator's computer, running a Go app to communicate via the MODBUS protocol to read sensor data and change generator settings. Data was packaged into efficient structures via Arvo and sent to gateway server</li>
+                        <li>The Go gateway server/router served several purposes, the main two being 1) keeping tabs on generator uptime by issuing heartbeats and 2) route incoming data packages to the processing pipeline and outgoing commands to the proper generator connection</li>
+                        <li>The processing pipeline started with a Kafka cluster to ensure scalability, and data was consumed via a Scala app that would spun up in a Spark cluster. The Scala app would unpack the data and transform the input into time-series data, POSTing that to an OpenTSDB database</li>
+                        <li>An express.js REST API was utilized to return generator inventory from MariaDB and their respective statuses from the gateway server, sensor time-series data, and relay commands back to the generator</li>
+                        <li>An Angular web-app provided a dashboard for a technician to log in, view the health of all generators they have permission to view, and visualize sensor data over time utilizing chart.js</li>
                     </ol>
                     <ul class="actions">
                         <li><a href="https://github.uconn.edu/SeniorDesignGroup5" class="button icon fa-desktop">View Code Repository</a></li>
