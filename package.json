@@ -2,17 +2,18 @@
   "dependencies": {
     "bowser": "^2.10.0",
     "breakpoints-js": "^1.0.6",
-    "jquery": "^3.4.1",
-    "parcel": "^1.12.4"
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "cssnano": "^4.1.10",
+    "@parcel/transformer-sass": "^2.5.0",
+    "cssnano": "^5.1.7",
+    "parcel": "^2.5.0",
     "rimraf": "^3.0.2",
     "sass": "^1.26.10"
   },
   "scripts": {
-    "start": "parcel index.html --out-dir dist",
+    "start": "parcel index.html --dist-dir dist",
     "prebuild": "rimraf dist",
-    "build": "parcel build index.html --out-dir dist --public-url ./"
+    "build": "parcel build index.html --dist-dir dist --public-url ./"
   }
 }

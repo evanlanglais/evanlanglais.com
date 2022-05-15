@@ -192,3 +192,4 @@ public/
 dist/
 
 .DS_STORE
+.parcel-cache
