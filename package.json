@@ -1,15 +1,15 @@
 {
   "dependencies": {
-    "bowser": "^2.10.0",
+    "bowser": "^2.11.0",
     "breakpoints-js": "^1.0.6",
     "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.5.0",
-    "cssnano": "^5.1.7",
-    "parcel": "^2.5.0",
-    "rimraf": "^3.0.2",
-    "sass": "^1.26.10"
+    "@parcel/transformer-sass": "^2.12.0",
+    "cssnano": "^6.1.2",
+    "parcel": "^2.12.0",
+    "rimraf": "^5.0.5",
+    "sass": "^1.74.1"
   },
   "scripts": {
     "start": "parcel index.html --dist-dir dist",
