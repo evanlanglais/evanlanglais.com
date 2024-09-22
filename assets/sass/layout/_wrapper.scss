@@ -554,6 +554,18 @@
 
 		}
 
+		@include breakpoint('<=xsmall') {
+			> section {
+				&.intro {
+					> header {
+						> ul.actions {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+
 		@include breakpoint('<=xxsmall') {
 			$pad: 1.5rem;
 
