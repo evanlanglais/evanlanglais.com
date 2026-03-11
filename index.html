@@ -27,7 +27,7 @@
             <h1>Evan Langlais</h1>
             <p>I make things and I have a website to prove it.</p>
             <ul class="actions">
-                <li><a href="assets/resume2024.pdf" class="button icon fa-book" target="_blank">Resume</a></li>
+                <li><a href="assets/langlais_evan_resume2026.pdf" class="button icon fa-book" target="_blank">Resume</a></li>
                 <li><a href="#contact" class="button icon fa-envelope scrolly">Get in touch</a></li>
             </ul>
             <ul class="actions intro-disappearable">
@@ -48,7 +48,9 @@
         </header>
         <div class="content">
             <p>
-                Experiencing the Pacific Northwest for the first time as an employee of Microsoft.
+                Software engineer with 7+ years of experience spanning cloud infrastructure, enterprise software,
+                and full-stack product development. Currently based in Redmond, WA as a subject matter expert on
+                Azure Core Networking's VNET team — building and operating distributed systems at hyper-scale.
             </p>
             <p>
                 I have been tinkering with computers and technology since the age of 11,
@@ -72,47 +74,75 @@
         <div class="content">
             <section id="microsoft">
                 <header>
-                    <h3>Microsoft</h3>
-                    <h4>2021 - Present</h4>
+                    <h3>Microsoft Corporation</h3>
+                    <h4>June 2021 - Present</h4>
                     <p>Redmond, WA</p>
                 </header>
                 <div class="content">
-                    <h5>Software Engineer II -- Azure Networking (SDN) on the Virtual Networking (VNET) team</h5>
+                    <h5>Software Engineer II -- Azure Core Networking, Virtual Networking (VNET) team</h5>
                     <p>
-                        High-performing high-impact member of the Azure VNET team, powering Azure customer networks with
-                        a product suite that leverages hyper-scale distributed networking infrastructure to achieve the fast,
-                        reliable and ubiquitous demands of the cloud.
-                    </p>
-                    <p>
-                        Foundational and instrumental member of the
+                        Core engineer on
                         <a href="https://learn.microsoft.com/en-us/azure/networking/nva-accelerated-connections" target="_blank">
-                            Accelerated Connection
+                            Azure Accelerated Connections
                         </a>
-                        feature team, leading the design and implementation of several key customer scenarios on infrastructure utilizing novel data processing hardware from AMD,
-                        unlocking data processing requirements of our largest customers for AI training, network security, etc.
+                        (<a href="https://www.usenix.org/conference/nsdi23/presentation/bansal" target="_blank">NSDI ‘23</a>)
+                        from inception through production GA — a greenfield platform that disaggregates stateful network functions
+                        off individual hosts into shared pools of programmable hardware. Designed and delivered key platform subsystems,
+                        and became a primary technical resource for cross-org design coordination, customer escalations, and enabling
+                        feature teams to build on the platform.
                     </p>
                     <p>
-                        Took an active role in continuously improving our team’s culture and processes by implementing sprint retrospectives,
-                        mentoring several new engineers, and taking decisive actions when necessary to ensure a positive, supportive, and productive team environment.
+                        Designed and delivered a high-throughput billing pipeline processing millions of dollars in daily revenue,
+                        requiring novel approaches to line-rate traffic classification under hardware constraints and end-to-end
+                        integration with upstream billing systems.
+                    </p>
+                    <p>
+                        Architected and shipped a new resource provisioning mode (now publicly documented as
+                        <a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-routing-appliance" target="_blank">
+                            Azure Virtual Network Routing Appliance</a>)
+                        that unlocked critical AI customer workloads by adapting an established programming pipeline to support
+                        an entirely new usage pattern under tight timelines.
+                    </p>
+                    <p>
+                        Drove platform production readiness by defining end-to-end reliability KPIs, building observability dashboards
+                        and regression testing infrastructure, and leading systematic investigations to measurable improvement.
+                        Served as a primary escalation point for cross-product investigations across the platform suite.
                     </p>
                 </div>
             </section>
             <section id="factset">
                 <header>
                     <h3>FactSet Research Systems</h3>
-                    <h4>2019 - 2021</h4>
+                    <h4>July 2019 - June 2021</h4>
                     <p>New York City</p>
                 </header>
                 <div class="content">
-                    <h5>Software Engineer -- Productivity Suite Office Integration Team</h5>
+                    <h5>Software Engineer III -- Productivity Suite Team</h5>
                     <p>
-                        Helped prioritize, refine, and implement several major product enhancements for WPF based Office extensions while working on the Productivity Suite team.
+                        Built and shipped Office product extensions on the Productivity Suite team, delivering features
+                        that augmented customer workflows to improve efficiency and effectiveness directly within Excel,
+                        Word, and PowerPoint.
                     </p>
                     <p>
-                        Worked daily with product owner, quality assurance and other engineering peers in a SCRUM Agile environment.
+                        Partnered with product managers to define requirements and deliver end-to-end solutions using C#
+                        within the Razor WPF ASP.NET framework, integrating with Office via COM and VB.NET.
+                    </p>
+                </div>
+            </section>
+            <section id="buildmybod">
+                <header>
+                    <h3>Build My Bod</h3>
+                    <h4>February 2016 - July 2019</h4>
+                </header>
+                <div class="content">
+                    <h5>Freelance Software Engineer</h5>
+                    <p>
+                        Collaborated directly with CEO on product vision, viability, design, and implementation across
+                        the full stack to close competitive gaps and launch new revenue-generating features.
                     </p>
                     <p>
-                        Performed in the top 5% of employees for FY2020, receiving a promotion a full fiscal year early.
+                        Owned product design and implementation across backend, frontend, and infrastructure, delivering
+                        features including vendor price-comparison tools and expanded product offering customization.
                     </p>
                 </div>
             </section>
@@ -136,13 +166,9 @@
                         Abstract
                     </h5>
                     <p>
-                        For security, isolation, metering and other purposes, public clouds today implement complex network functions at every server. Today's implementations, in software or on FPGAs and ASICs that are attached to each host, are becoming increasingly complex, costly and bottlenecks to scalability.
-                    </p>
-                    <p>
-                        We present a different design that disaggregates network function processing off the host and into shared resource pools by making novel use of appliances which tightly integrate general-purpose ARM cores with high-speed stateful match processing ASICs. When work is skewed across VMs, such disaggregation can offer better reliability and performance over the state-of-art at a lower per-server cost.
-                    </p>
-                    <p>
-                        We describe our solutions to the consequent challenges and present results from a production deployment at a large public cloud.
+                        Co-authored paper presenting Sirius, a system for disaggregating stateful network functions
+                        (firewalls, NAT, load balancing) into shared pools of P4-programmable NIC appliances, achieving
+                        5-10x improvement in connections-per-second for Azure VMs. Now in production as Azure Accelerated Connections.
                     </p>
                     <h5>
                         Presentation
@@ -181,21 +207,91 @@
             <h2>Active Projects / Ventures</h2>
         </header>
         <div class="content">
-            <section id="xynon">
+            <section id="parkpredictor">
                 <header>
-                    <h3>Xynon Ventures</h3>
+                    <h3>Park Predictor</h3>
                     <p>
-                        My internal incubator
+                        A data platform for theme park wait time analytics and prediction.
                     </p>
                 </header>
                 <div class="content">
                     <p>
-                        In a way a spiritual successor to <a href="#treehousetech">Treehouse Technologies</a>, Xynon Ventures seeks to be a
-                        modern outlet for my ideas in the tech and non-tech spaces alike.
+                        Park Predictor is an end-to-end data platform that continuously collects, processes, and visualizes
+                        ride wait times across 50+ US theme parks — from Disney and Universal to Cedar Fair and Six Flags.
+                        A Go-based data collector polls live wait times every 5 minutes from parks nationwide, storing raw
+                        time-series data in PostgreSQL and computing derived analytics through a multi-layer processing pipeline.
                     </p>
+                    <p>
+                        The processing pipeline goes beyond raw wait times, computing real-time velocity and trend detection
+                        (is this line getting longer or shorter?), park-level crowd pressure scoring, pairwise attraction
+                        correlation analysis (which rides fill up together?), and crowd redistribution impact measurement
+                        (when a ride goes down, where do the crowds go?). These derived metrics power a Nuxt 4 analytics
+                        dashboard where users can monitor live conditions, explore historical trends, and compare wait
+                        patterns across rides on interactive time-series charts.
+                    </p>
+                    <p>
+                        The long-term vision for Park Predictor is to leverage this growing dataset and analytics pipeline
+                        to build a predictive model — ultimately delivered via mobile app — that can tell park visitors
+                        when ride wait times are likely to drop, helping them make smarter decisions about when to queue
+                        and when to wait it out.
+                    </p>
+                    <ul class="feature-icons">
+                        <li class="icon fa-bolt">Frameworks: Nuxt 4 (Vue 3), Nitro</li>
+                        <li class="icon fa-code">Languages: Go, TypeScript</li>
+                        <li class="icon fa-database">Data: PostgreSQL, Supabase, Unovis</li>
+                        <li class="icon fa-gear">Infrastructure: Azure Static Web Apps, Docker</li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="https://parkpredictor.com" class="button icon fa-line-chart" target="_blank">Visit parkpredictor.com</a></li>
+                    </ul>
                 </div>
             </section>
 
+            <section id="familyarchives">
+                <header>
+                    <h3>Family Archives</h3>
+                    <p>
+                        A private family media platform for preserving and sharing photos and videos.
+                    </p>
+                </header>
+                <div class="content">
+                    <p>
+                        Family Archives is a self-hosted family media platform built to give my family a private,
+                        centralized place to upload, organize, and relive photos and videos from family events. Members
+                        authenticate via passwordless email login, browse events in a clean dashboard, and view media
+                        through a built-in theater with full video playback and photo viewer — all without handing
+                        our memories over to a third-party service.
+                    </p>
+                    <p>
+                        Under the hood, the platform is powered by a Nuxt 4 frontend deployed as an Azure Static Web App
+                        and a dedicated Go media processor running on my home NAS. Uploaded files are chunked and sent to
+                        a self-hosted Garage S3 instance, where the Go processor picks them up, transcodes video via FFmpeg,
+                        optimizes images, generates thumbnails, and archives originals — all automatically. Secure
+                        communication between the frontend and the Garage S3 endpoints is handled through a Cloudflare Tunnel,
+                        keeping everything accessible without exposing my home network.
+                    </p>
+                    <p>
+                        While currently built for my family, the platform is designed with extensibility in mind — the
+                        group-based access control, event organization model, and self-contained processing pipeline
+                        are architected to potentially serve other families as a product in the future.
+                    </p>
+                    <ul class="feature-icons">
+                        <li class="icon fa-bolt">Frameworks: Nuxt 4 (Vue 3), Nitro</li>
+                        <li class="icon fa-code">Languages: Go, TypeScript</li>
+                        <li class="icon fa-database">Data: PostgreSQL (Supabase), Garage S3</li>
+                        <li class="icon fa-gear">Infrastructure: Azure Static Web Apps, Cloudflare Tunnel, FFmpeg, Docker</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <section id="past">
+        <header>
+            <h2>Past Projects / Ventures</h2>
+        </header>
+        <div class="content">
             <section id="huskython">
                 <header>
                     <h3>HuskyTHON</h3>
@@ -212,11 +308,8 @@
                     </p>
                     <p>
                         The application is a Vue3 web app utilizing the Ionic component library to create a cohesive
-                        'native-esk' experience.
-                    </p>
-                    <p>
-                        It also utilizes a Node.js App (hosted in Azure) which is responsible for brokering data
-                        from various sources into a single highly available and scalable API for the application.
+                        'native-esk' experience. It also utilizes a Node.js backend (hosted in Azure) responsible for
+                        brokering data from various sources into a single highly available and scalable API.
                     </p>
                     <ul class="feature-icons">
                         <li class="icon fa-bolt">Frameworks: Vue 3</li>
@@ -224,24 +317,9 @@
                         <li class="icon fa-mobile">Platforms: iOS</li>
                         <li class="icon fa-gear">Technologies: Ionic 5, Capacitor</li>
                     </ul>
-                    <ul class="actions">
-                        <li><a href="https://itunes.apple.com/us/app/huskython/id1196440875"
-                               class="button icon fa-apple">Download in App Store</a></li>
-                        <li hidden><a href="privacy/huskython.html"
-                               class="button icon fa-file-text">View Privacy Policy (old)</a></li>
-                        <li><a href="privacy/huskython-1-15-22.html"
-                               class="button icon fa-file-text">View Privacy Policy</a></li>
-                    </ul>
                 </div>
             </section>
-        </div>
-    </section>
 
-    <section id="past">
-        <header>
-            <h2>Past Projects / Ventures</h2>
-        </header>
-        <div class="content">
             <section id="generators">
                 <header>
                     <h3>Emergency Generators "On-the-Cloud"</h3>
@@ -280,12 +358,15 @@
             <section id="hue">
                 <header>
                     <h3>HUE</h3>
+                    <h4>2016-2018</h4>
                     <p>A simple color matching game</p>
                 </header>
                 <div class="content">
                     <p>
-                        HUE is a simple color matching game that was in development for the better part of the last two years, starting as a spiritual successor from a different original game called Occasionally Blue.
-                        The player uses the full screen to intuitively select a color that is compared against a set of shapes randomly drawn on the screen utilizing the Delta-E 2000 algorithm.
+                        HUE is a color matching game I built as a hobby project during college. A spiritual successor
+                        to an earlier prototype called Occasionally Blue, the player uses the full screen to intuitively
+                        select a color that is compared against a set of shapes randomly drawn on the screen utilizing
+                        the Delta-E 2000 algorithm. Still available on the App Store.
                     </p>
                     <ul class="feature-icons">
                         <li class="icon fa-bolt">Frameworks: Phaser.io</li>
@@ -300,34 +381,6 @@
                                 Download in App Store
                             </a>
                         </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="tf2finance">
-                <header>
-                    <h3>TF2 Finance</h3>
-                    <p>
-                        A cross-platform mobile application for displaying price information important to the trading platform of Team Fortress 2.
-                    </p>
-                </header>
-                <div class="content">
-                    <p>
-                        Started as a personal project all the way back in 2014, the new version of the TF2 Finance app is a
-                        modern web application that utilizes Backpack.tf's currency API to display information and
-                        graphs regarding TF2 items such as Keys, Refined Metal, and Earbuds. Other features include
-                        converting currencies into other forms (including USD) and graphing price history for the
-                        application.
-                    </p>
-                    <p>
-                        It also utilizes a PHP backend with caching to create a basic API for brokering information
-                        from various sources.
-                    </p>
-                    <ul class="feature-icons">
-                        <li class="icon fa-bolt">Frameworks: Ionic 4, Angular 6</li>
-                        <li class="icon fa-code">Languages: Typescript, HTML, CSS, PHP</li>
-                        <li class="icon fa-mobile">Platforms: iOS and Android</li>
-                        <li class="icon fa-gear">Technologies: Cordova, Firebase, AdMob</li>
                     </ul>
                 </div>
             </section>
@@ -366,7 +419,7 @@
             <h3>University of Connecticut - Storrs, CT</h3>
             <h4>2015 - 2019</h4>
             <h5>Bachelor of Science in Engineering</h5>
-            <h5>Computer Science and Engineering - Magna Cum Laude</h5>
+            <h5>Computer Science and Engineering — Magna Cum Laude (GPA: 3.85)</h5>
         </div>
     </section>
 
