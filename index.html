@@ -6,7 +6,7 @@
     <title>Evan Langlais</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="Portfolio for Evan Langlais, a passionate product-focused software engineer." />
+    <meta name="description" content="Evan Langlais — software engineer specializing in distributed systems, cloud infrastructure, and full-stack product development." />
     <meta name="keywords" content="Evan Langlais Development Portfolio" />
     <link rel="stylesheet" href="assets/sass/main.scss" />
     <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
@@ -48,21 +48,115 @@
         </header>
         <div class="content">
             <p>
-                Software engineer with 7+ years of experience spanning cloud infrastructure, enterprise software,
-                and full-stack product development. Currently based in Redmond, WA as a subject matter expert on
-                Azure Core Networking's VNET team — building and operating distributed systems at hyper-scale.
+                I've always looked at the things around me and thought: someone made this, so I should be able to too.
+                That instinct led me from modding Xboxes and writing Minecraft mods as a kid, to attempting to build
+                video games with friends, to eventually teaching myself web and mobile development. By the end of high school
+                I was freelancing Android apps for local businesses while working as a computer repair tech at a small shop —
+                an experience that gave me equal parts troubleshooting ability and appreciation for what it takes to make a
+                small business succeed.
             </p>
             <p>
-                I have been tinkering with computers and technology since the age of 11,
-                becoming a sole proprietor under the name of Treehouse Technologies in the year 2012 as a
-                freshman in high school. I played around with various aspects of tech such as video game development,
-                server infrastructure and hosting, consumer system building, and freelance software development. That passion for
-                computers eventually led me to major in the Computer Science and Engineering field at the University of Connecticut.
+                I studied Computer Science and Engineering at UConn, which filled in the foundational knowledge behind
+                the technologies I'd been self-teaching for years. After college, my time at FactSet made me deeply
+                product-focused — building Office extensions for investment bankers taught me to obsess over the
+                customer's workflow and ship features that made their day measurably better. I then made the jump to
+                Microsoft's Azure Core Networking team, where I ramped into an entirely unfamiliar world of networking stacks,
+                software-defined networking, and DPU hardware — and eventually became a subject matter expert on a platform
+                operating at global scale.
             </p>
             <p>
-                I have a passion for creating things -- whether that thing is websites, apps, music, cities, businesses, YouTube videos,
-                I find pleasure in adding my own voice and creative touch to any space.
+                I'm a generalist by nature. I'd rather go deep on a new domain than stay comfortable in one stack forever,
+                and I'm at my best when I can connect technical depth to real product outcomes with direct customer impact.
+                Outside of work, I channel that same energy into personal projects — building
+                <a href="#parkpredictor">data platforms</a>, <a href="#familyarchives">self-hosted infrastructure</a>,
+                and whatever else scratches the itch to keep learning and creating.
             </p>
+        </div>
+    </section>
+
+    <!-- Section -->
+    <section id="projects">
+        <header>
+            <h2>What I’m Building</h2>
+        </header>
+        <div class="content">
+            <section id="parkpredictor">
+                <header>
+                    <h3>Park Predictor</h3>
+                    <p>
+                        A data platform for theme park wait time analytics and prediction.
+                    </p>
+                </header>
+                <div class="content">
+                    <p>
+                        Park Predictor is an end-to-end data platform that continuously collects, processes, and visualizes
+                        ride wait times across 50+ US theme parks — from Disney and Universal to Cedar Fair and Six Flags.
+                        A Go-based data collector polls live wait times every 5 minutes from parks nationwide, storing raw
+                        time-series data in PostgreSQL and computing derived analytics through a multi-layer processing pipeline.
+                    </p>
+                    <p>
+                        The processing pipeline goes beyond raw wait times, computing real-time velocity and trend detection
+                        (is this line getting longer or shorter?), park-level crowd pressure scoring, pairwise attraction
+                        correlation analysis (which rides fill up together?), and crowd redistribution impact measurement
+                        (when a ride goes down, where do the crowds go?). These derived metrics power a Nuxt 4 analytics
+                        dashboard where users can monitor live conditions, explore historical trends, and compare wait
+                        patterns across rides on interactive time-series charts.
+                    </p>
+                    <p>
+                        The long-term vision for Park Predictor is to leverage this growing dataset and analytics pipeline
+                        to build a predictive model — ultimately delivered via mobile app — that can tell park visitors
+                        when ride wait times are likely to drop, helping them make smarter decisions about when to queue
+                        and when to wait it out.
+                    </p>
+                    <ul class="feature-icons">
+                        <li class="icon fa-bolt">Frameworks: Nuxt 4 (Vue 3), Nitro</li>
+                        <li class="icon fa-code">Languages: Go, TypeScript</li>
+                        <li class="icon fa-database">Data: PostgreSQL, Supabase, Unovis</li>
+                        <li class="icon fa-gear">Infrastructure: Azure Static Web Apps, Docker</li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="https://parkpredictor.com" class="button icon fa-line-chart" target="_blank">Visit parkpredictor.com</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="familyarchives">
+                <header>
+                    <h3>Family Archives</h3>
+                    <p>
+                        A private family media platform for preserving and sharing photos and videos.
+                    </p>
+                </header>
+                <div class="content">
+                    <p>
+                        Family Archives is a self-hosted family media platform built to give my family a private,
+                        centralized place to upload, organize, and relive photos and videos from family events. Members
+                        authenticate via passwordless email login, browse events in a clean dashboard, and view media
+                        through a built-in theater with full video playback and photo viewer — all without handing
+                        our memories over to a third-party service.
+                    </p>
+                    <p>
+                        Under the hood, the platform is powered by a Nuxt 4 frontend deployed as an Azure Static Web App
+                        and a dedicated Go media processor running on my home NAS. Uploaded files are chunked and sent to
+                        a self-hosted Garage S3 instance, where the Go processor picks them up, transcodes video via FFmpeg,
+                        optimizes images, generates thumbnails, and archives originals — all automatically. Secure
+                        communication between the frontend and the Garage S3 endpoints is handled through a Cloudflare Tunnel,
+                        keeping everything accessible without exposing my home network.
+                    </p>
+                    <p>
+                        While currently built for my family, the platform is designed with extensibility in mind — the
+                        group-based access control, event organization model, and self-contained processing pipeline
+                        are architected to potentially serve other families as a product in the future.
+                    </p>
+                    <ul class="feature-icons">
+                        <li class="icon fa-bolt">Frameworks: Nuxt 4 (Vue 3), Nitro</li>
+                        <li class="icon fa-code">Languages: Go, TypeScript</li>
+                        <li class="icon fa-database">Data: PostgreSQL (Supabase), Garage S3</li>
+                        <li class="icon fa-gear">Infrastructure: Azure Static Web Apps, Cloudflare Tunnel, FFmpeg, Docker</li>
+                    </ul>
+                </div>
+            </section>
+
         </div>
     </section>
 
@@ -202,156 +296,43 @@
     </section>
 
     <!-- Section -->
-    <section id="projects">
-        <header>
-            <h2>Active Projects / Ventures</h2>
-        </header>
-        <div class="content">
-            <section id="parkpredictor">
-                <header>
-                    <h3>Park Predictor</h3>
-                    <p>
-                        A data platform for theme park wait time analytics and prediction.
-                    </p>
-                </header>
-                <div class="content">
-                    <p>
-                        Park Predictor is an end-to-end data platform that continuously collects, processes, and visualizes
-                        ride wait times across 50+ US theme parks — from Disney and Universal to Cedar Fair and Six Flags.
-                        A Go-based data collector polls live wait times every 5 minutes from parks nationwide, storing raw
-                        time-series data in PostgreSQL and computing derived analytics through a multi-layer processing pipeline.
-                    </p>
-                    <p>
-                        The processing pipeline goes beyond raw wait times, computing real-time velocity and trend detection
-                        (is this line getting longer or shorter?), park-level crowd pressure scoring, pairwise attraction
-                        correlation analysis (which rides fill up together?), and crowd redistribution impact measurement
-                        (when a ride goes down, where do the crowds go?). These derived metrics power a Nuxt 4 analytics
-                        dashboard where users can monitor live conditions, explore historical trends, and compare wait
-                        patterns across rides on interactive time-series charts.
-                    </p>
-                    <p>
-                        The long-term vision for Park Predictor is to leverage this growing dataset and analytics pipeline
-                        to build a predictive model — ultimately delivered via mobile app — that can tell park visitors
-                        when ride wait times are likely to drop, helping them make smarter decisions about when to queue
-                        and when to wait it out.
-                    </p>
-                    <ul class="feature-icons">
-                        <li class="icon fa-bolt">Frameworks: Nuxt 4 (Vue 3), Nitro</li>
-                        <li class="icon fa-code">Languages: Go, TypeScript</li>
-                        <li class="icon fa-database">Data: PostgreSQL, Supabase, Unovis</li>
-                        <li class="icon fa-gear">Infrastructure: Azure Static Web Apps, Docker</li>
-                    </ul>
-                    <ul class="actions">
-                        <li><a href="https://parkpredictor.com" class="button icon fa-line-chart" target="_blank">Visit parkpredictor.com</a></li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="familyarchives">
-                <header>
-                    <h3>Family Archives</h3>
-                    <p>
-                        A private family media platform for preserving and sharing photos and videos.
-                    </p>
-                </header>
-                <div class="content">
-                    <p>
-                        Family Archives is a self-hosted family media platform built to give my family a private,
-                        centralized place to upload, organize, and relive photos and videos from family events. Members
-                        authenticate via passwordless email login, browse events in a clean dashboard, and view media
-                        through a built-in theater with full video playback and photo viewer — all without handing
-                        our memories over to a third-party service.
-                    </p>
-                    <p>
-                        Under the hood, the platform is powered by a Nuxt 4 frontend deployed as an Azure Static Web App
-                        and a dedicated Go media processor running on my home NAS. Uploaded files are chunked and sent to
-                        a self-hosted Garage S3 instance, where the Go processor picks them up, transcodes video via FFmpeg,
-                        optimizes images, generates thumbnails, and archives originals — all automatically. Secure
-                        communication between the frontend and the Garage S3 endpoints is handled through a Cloudflare Tunnel,
-                        keeping everything accessible without exposing my home network.
-                    </p>
-                    <p>
-                        While currently built for my family, the platform is designed with extensibility in mind — the
-                        group-based access control, event organization model, and self-contained processing pipeline
-                        are architected to potentially serve other families as a product in the future.
-                    </p>
-                    <ul class="feature-icons">
-                        <li class="icon fa-bolt">Frameworks: Nuxt 4 (Vue 3), Nitro</li>
-                        <li class="icon fa-code">Languages: Go, TypeScript</li>
-                        <li class="icon fa-database">Data: PostgreSQL (Supabase), Garage S3</li>
-                        <li class="icon fa-gear">Infrastructure: Azure Static Web Apps, Cloudflare Tunnel, FFmpeg, Docker</li>
-                    </ul>
-                </div>
-            </section>
-
-        </div>
-    </section>
-
     <section id="past">
         <header>
-            <h2>Past Projects / Ventures</h2>
+            <h2>Earlier Work</h2>
         </header>
         <div class="content">
-            <section id="huskython">
-                <header>
-                    <h3>HuskyTHON</h3>
-                    <p>
-                        A mobile application for the HuskyTHON Dance Marathon at the University of Connecticut.
-                    </p>
-                </header>
-                <div class="content">
-                    <p>
-                        The HuskyTHON Application is a modern web application that allows participants of the
-                        HuskyTHON Dance Marathon event at the University of Connecticut to keep up to date with
-                        various fundraising events, personal and team fundraising progress, and information
-                        regarding the dance marathon.
-                    </p>
-                    <p>
-                        The application is a Vue3 web app utilizing the Ionic component library to create a cohesive
-                        'native-esk' experience. It also utilizes a Node.js backend (hosted in Azure) responsible for
-                        brokering data from various sources into a single highly available and scalable API.
-                    </p>
-                    <ul class="feature-icons">
-                        <li class="icon fa-bolt">Frameworks: Vue 3</li>
-                        <li class="icon fa-code">Languages: Typescript, Javascript</li>
-                        <li class="icon fa-mobile">Platforms: iOS</li>
-                        <li class="icon fa-gear">Technologies: Ionic 5, Capacitor</li>
-                    </ul>
-                </div>
-            </section>
-
+            <p>
+                A selection of projects from college and earlier that helped shape how I think about building software.
+            </p>
             <section id="generators">
                 <header>
                     <h3>Emergency Generators "On-the-Cloud"</h3>
                     <h4>2018-2019</h4>
-                    <p>
-                        The senior design project as part of UConn's engineering curriculum. The problem / request came from a Connecticut company which installs and maintains Kohler generators.
-                    </p>
+                    <p>UConn Senior Design</p>
                 </header>
                 <div class="content">
                     <p>
-                        Led a team of 6 academic peers to fulfill client requirement of allowing technicians to view data of, and send commands to, an existing infrastructure of over 7000 generators throughout the northeast, via a web app.
+                        Led a team of 6 to build an IoT platform for a Connecticut generator company, allowing technicians to
+                        remotely monitor and control 7,000+ generators via a web dashboard. Designed a five-stage data pipeline
+                        spanning Raspberry Pi (Go/MODBUS), a Go gateway server, Kafka/Spark processing, OpenTSDB storage,
+                        and an Angular frontend.
                     </p>
-                    <p>
-                        I became the project's lead architect, and after reading IOT and big-data white papers provided by our academic advisor
-                        I planned a five stage pipeline which would theoretically allow a full rollout of retrofitting the 7000+ generators, fully supporting the amount of data processing that would be associated with it.
-                        To implement the project, the team worked together to plan all necessary tasks, those tasks' dependencies, and estimated amount of work. Together, we were able to create a fully working prototype several weeks before UConn's Demo Day 2019.
-                    </p>
-                    <img src="assets/images/sd_datapath.webp" alt="datapath diagram" style="width: 100%"/>
-                    <p>
-                        The five stage data pipeline included
-                    </p>
-                    <ol>
-                        <li>Attaching a Raspberry Pi to the generator's computer, running a Go app to communicate via the MODBUS protocol to read sensor data and change generator settings. Data was packaged into efficient structures via Arvo and sent to gateway server</li>
-                        <li>The Go gateway server/router served several purposes, the main two being 1) keeping tabs on generator uptime by issuing heartbeats and 2) route incoming data packages to the processing pipeline and outgoing commands to the proper generator connection</li>
-                        <li>The processing pipeline started with a Kafka cluster to ensure scalability, and data was consumed via a Scala app that would spun up in a Spark cluster. The Scala app would unpack the data and transform the input into time-series data, POSTing that to an OpenTSDB database</li>
-                        <li>An express.js REST API was utilized to return generator inventory from MariaDB and their respective statuses from the gateway server, sensor time-series data, and relay commands back to the generator</li>
-                        <li>An Angular web-app provided a dashboard for a technician to log in, view the health of all generators they have permission to view, and visualize sensor data over time utilizing chart.js</li>
-                    </ol>
                     <ul class="actions">
-                        <li><a href="https://github.uconn.edu/SeniorDesignGroup5" class="button icon fa-desktop">Code Repository</a></li>
                         <li><a href="assets/sd_poster.pdf" class="button icon fa-file-pdf-o">Technical Overview</a></li>
                     </ul>
+                </div>
+            </section>
+
+            <section id="huskython">
+                <header>
+                    <h3>HuskyTHON</h3>
+                    <p>Dance marathon mobile app for UConn</p>
+                </header>
+                <div class="content">
+                    <p>
+                        A Vue 3 / Ionic mobile app with a Node.js backend (hosted in Azure) that helped
+                        participants track fundraising progress and event information for UConn’s dance marathon.
+                    </p>
                 </div>
             </section>
 
@@ -359,21 +340,13 @@
                 <header>
                     <h3>HUE</h3>
                     <h4>2016-2018</h4>
-                    <p>A simple color matching game</p>
+                    <p>A color matching game</p>
                 </header>
                 <div class="content">
                     <p>
-                        HUE is a color matching game I built as a hobby project during college. A spiritual successor
-                        to an earlier prototype called Occasionally Blue, the player uses the full screen to intuitively
-                        select a color that is compared against a set of shapes randomly drawn on the screen utilizing
-                        the Delta-E 2000 algorithm. Still available on the App Store.
+                        A hobby game built during college using Phaser.io and Cordova. Players match colors on screen
+                        using the Delta-E 2000 algorithm. Still available on the App Store.
                     </p>
-                    <ul class="feature-icons">
-                        <li class="icon fa-bolt">Frameworks: Phaser.io</li>
-                        <li class="icon fa-code">Languages: Javascript</li>
-                        <li class="icon fa-mobile">Platforms: iOS and Android</li>
-                        <li class="icon fa-gear">Technologies: Cordova, Firebase</li>
-                    </ul>
                     <ul class="actions">
                         <li>
                             <a href="https://itunes.apple.com/us/app/hue-a-color-matching-game/id1450113995"
@@ -382,29 +355,6 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-            </section>
-
-            <section id="treehousetech">
-                <header>
-                    <h3>Treehouse Technologies</h3>
-                    <p>
-                        A sole proprietorship created to encapsulate various software products, system building
-                        services, and consulting.
-                    </p>
-                </header>
-                <div class="content">
-                    <p>
-                        Treehouse Technologies was originally founded by myself and two friends with a wildly
-                        ambitious vision of building video games to compete with AAA game studios. After the other
-                        two founding members left, I registered Treehouse Technologies as a sole proprietorship in
-                        my freshman year of high-school. From that point, the Treehouse Technologies brand became
-                        one of self and business experimentation--constantly exploring new technology and business ventures.
-                    </p>
-                    <p>
-                        I credit most of the problem-solving and programming skills that I use today (both personally
-                        and professionally) to be a result of the creative experimentation that Treehouse Technologies enabled.
-                    </p>
                 </div>
             </section>
         </div>
