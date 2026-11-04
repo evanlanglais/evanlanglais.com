@@ -17,5 +17,6 @@
     "start": "parcel index.html --dist-dir dist",
     "prebuild": "rimraf dist",
     "build": "parcel build index.html --dist-dir dist --public-url ./"
-  }
+  },
+  "packageManager": "yarn@4.18.1"
 }
